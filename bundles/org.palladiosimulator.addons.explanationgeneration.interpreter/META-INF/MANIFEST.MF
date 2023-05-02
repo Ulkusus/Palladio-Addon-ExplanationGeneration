@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Interpreter
+Bundle-SymbolicName: org.palladiosimulator.addons.explanationgeneration.interpreter
+Bundle-Version: 1.0.0.qualifier
+Automatic-Module-Name: org.palladiosimulator.addons.explanationgeneration.interpreter
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Export-Package: org.palladiosimulator.addons.explanationgeneration.interpreter
+Require-Bundle: org.palladiosimulator.addons.explanationgeneration.data,
+ org.apache.log4j,
+ org.yaml.snakeyaml,
+ org.eclipse.core.runtime,
+ org.eclipse.ui.console,
+ org.eclipse.jface

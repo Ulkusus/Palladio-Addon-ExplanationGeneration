@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Ui
+Bundle-SymbolicName: org.palladiosimulator.addons.explanationgeneration.ui;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Automatic-Module-Name: org.palladiosimulator.addons.explanationgeneration.ui
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Require-Bundle: org.eclipse.debug.ui,
+ org.eclipse.swt,
+ org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.ui.console,
+ de.uka.ipd.sdq.workflow.launchconfig
+Export-Package: org.palladiosimulator.addons.explanationgeneration.ui

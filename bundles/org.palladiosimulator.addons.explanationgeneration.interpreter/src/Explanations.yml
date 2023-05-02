@@ -1,0 +1,12 @@
+#--------------------------------------------------------------------------------------------
+# Feel free to add comments such as this one for readability.
+# Empty lines between different texts do not affect the parser either.
+#--------------------------------------------------------------------------------------------
+UserFinishedEarly: The User with the ID ${UserFinished.user} finished before 10.0 simulation time.
+
+UsersArriveTogether: The users ${us1.user} and ${us2.user} arrived within 0.5 simulation time of each other.
+
+UsersArriveTogetherAlternative: "Really, the users ${us1.user} and ${us2.user} 
+        arrived within 0.5 simulation time of each other."
+
+JobTooSlow: The job ${jf.id} was too slow, it took ${duration} simulation time to complete.

@@ -1,0 +1,32 @@
+#--------------------------------------------------------------------------------------------
+# Feel free to add comments such as this one for readability.
+# Empty lines between different tags do not affect the parser either.
+#--------------------------------------------------------------------------------------------
+cases:
+    UserFinishedEarly:
+        trigger: UserFinished
+        select: UserFinished.user
+        where: UserFinished.time < 10%d     # details in conditions do not have to be selected
+
+    UsersArriveTogether:
+        trigger: UserStarted AS us1, UserStarted AS us2
+        select: us1.user, us2.user
+        where: NOT DIFFERENCE us1.time us2.time > 0.5%d
+            # if a condition is not directly available yet, NOT may help
+
+    UsersArriveTogetherAlternative:
+        # functionally the same as the case before, but offers better performance
+        # as it gets abandoned once the case is not possible anymore
+        trigger: UserStarted AS us1, UserStarted AS us2
+        select: us1.user, us2.user
+        stop: DIFFERENCE us1.time ANY.time > 0.5%d
+
+    JobTooSlow:
+        trigger: JobInitiated AS ji, JobFinished AS jf
+        select: jf.id, %DIFFERENCE jf.time ji.time AS duration
+        where: DIFFERENCE jf.time ji.time > 5%d
+            AND jf.id EQUALS ji.id
+        stop: ANY.type EQUALS JobFinished%s 
+            AND ji.id EQUALS ANY.id
+            AND NOT DIFFERENCE jf.time ji.time > 5%d
+            # the type of an event is always available as a detail as well

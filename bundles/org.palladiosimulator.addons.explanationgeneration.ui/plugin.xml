@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.debug.ui.launchConfigurationTabs">
+      <tab
+            class="org.palladiosimulator.addons.explanationgeneration.ui.ExplanationFileTab"
+            group="org.palladiosimulator.analyzer.slingshot.ui.launchConfigurationTabGroup1"
+            id="org.palladiosimulator.addons.explanationgeneration.ui.tab1"
+            name="org.palladiosimulator.addons.explanationgeneration.ui.tab1">
+      </tab>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view 
+      		id="org.palladsimulator.addons.explanationgeneration.ui.explanationgenerationview"
+         	name="ExplanationGenerationView"
+         	class="org.palladiosimulator.addons.explanationgeneration.ui.ExplanationGenerationView"
+      />
+   </extension>
+</plugin>

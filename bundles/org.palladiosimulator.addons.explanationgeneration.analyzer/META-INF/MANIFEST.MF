@@ -1,0 +1,16 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Analyzer
+Bundle-SymbolicName: org.palladiosimulator.addons.explanationgeneration.analyzer
+Bundle-Version: 1.0.0.qualifier
+Automatic-Module-Name: org.palladiosimulator.addons.explanationgeneration.analyzer
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Export-Package: org.palladiosimulator.addons.explanationgeneration.analyzer
+Require-Bundle: org.palladiosimulator.analyzer.slingshot.common,
+ org.palladiosimulator.addons.explanationgeneration.data,
+ org.palladiosimulator.addons.explanationgeneration.builder,
+ com.google.guava,
+ org.apache.log4j,
+ org.eclipse.core.runtime,
+ org.yaml.snakeyaml
+Import-Package: org.yaml.snakeyaml

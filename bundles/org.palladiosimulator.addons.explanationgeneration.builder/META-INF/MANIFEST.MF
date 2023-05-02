@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Builder
+Bundle-SymbolicName: org.palladiosimulator.addons.explanationgeneration.builder
+Bundle-Version: 1.0.0.qualifier
+Automatic-Module-Name: org.palladiosimulator.addons.explanationgeneration.builder
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Export-Package: org.palladiosimulator.addons.explanationgeneration.builder
+Require-Bundle: org.palladiosimulator.addons.explanationgeneration.interpreter,
+ org.palladiosimulator.addons.explanationgeneration.data,
+ org.apache.log4j
